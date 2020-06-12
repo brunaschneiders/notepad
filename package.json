@@ -1,0 +1,11 @@
+{
+  "name": "desafioBrunaSchneiders05-28",
+  "version": "1.0.0",
+  "description": "bloco de notas com node",
+  "main": "index.js",
+  "author": "Bruna Schneiders",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}

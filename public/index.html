@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Bloco de Notas</title>
+</head>
+<body>
+  <section id="home">
+    <div class="header">
+        <h1>Bloco de Notas</h1>
+        <div class="navigation-items">
+            <a class="active" href="#home">Home</a>
+            <a href="#cabecalho-entrada-dados">Criar nota</a>
+            <a href="#mural-de-notas">Notas criadas</a>
+        </div>
+    </div>
+    <div class="section-criar-nota">
+        <div class="background-image"></div>
+        <h1 class="display-4"></h1>
+        <p class="lead">Teve uma boa ideia? Um compromisso que não pode ser esquecido?</p>
+        <p class="lead2">Registre tudo no seu Bloco de Notas para que nada seja perdido!</p>
+        <a href="#cabecalho-entrada-dados" class="btn-criar-nota" id="btn-criar-nota">Criar uma nota</a>
+    </div>
+  </section>
+  <section id="section-criar-nota">
+    <div id="cabecalho-entrada-dados">Criar nota</div>
+        <div class="entrada-dados">
+          <form id="formulario-entrada-dados">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Título</label>
+              <input type="text" class="form-control" id="txtTitulo" placeholder="Ex.: Mercado">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Conteúdo</label>
+              <textarea class="form-control" id="txtConteudo" rows="3" placeholder="Ex.: Comprar arroz e feijão."></textarea>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="date" class="form-control" id="txtData">
+              </div>
+              <div class="col">
+                <input type="time" class="form-control" id="txtHora">
+              </div>
+            </div>
+            <button id="btn-incluir-nota">Salvar nota</button>
+          </form>
+          <div class="quantidadeNotasAviso"> 
+            <table class="quantidadeNotas">
+                <thead>
+                    <tr>
+                        <th>Quantidade de notas salvas:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="quantidade">-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="aviso">
+                <div class="avisoInicial">Suas notas salvas serão apresentadas logo abaixo.</div>
+            </div>
+          </div>
+        </div>
+  </section>
+  <section id="mural-de-notas">
+    <a name="muralNotas"><div id="cabecalhoNotas"></div></a>
+    <div id="resultadoNotas"></div>
+  </section>
+  <script type="text/javaScript" src="js/blocoDeNotas.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="../src/index.js"></script>
+</body>
+</html>

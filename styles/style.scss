@@ -1,0 +1,327 @@
+$primary-color: rgb(30, 35, 116);
+$secondary-color: rgb(49, 53, 134);
+$tertiary-color: rgb(14, 17, 77);
+$transparency-color: rgba(35, 39, 104, 0.7);
+$color-text-shadow: black;
+$color-box-shadow: rgb(83, 83, 83);
+$color-box-shadow-cards: rgba(0,0,0,0.2);
+$color-text: whitesmoke;
+$background-color-default:whitesmoke;
+$box-shadow-default: 0px 0px 10px 2px;
+$text-shadow-section-title: 0px 1px 5px;
+$text-shadow-button: 0 5px 0;
+$border-default: 2px solid $primary-color;
+
+
+*{
+    box-sizing: border-box;
+}
+
+#home{
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.header{
+    align-items: center;
+    background-color: $primary-color;
+    box-shadow: $box-shadow-default $primary-color;
+    display: flex;
+    justify-content: space-between;
+    min-height: 15vh;
+    width: 100%;
+    padding: 3vh 5vw;
+    position: fixed;
+    top: 0vh;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.navigation-items{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.header h1, 
+.header a{
+    color: $color-text;
+    font-weight: bold;
+    transition: all;
+}
+
+.header h1:hover, 
+.header a:hover{
+    color: $color-text;
+}
+
+.header h1{
+    font-size: 50px;
+    text-shadow: $text-shadow-section-title $color-text-shadow;
+}
+
+.header a{
+    font-size: 25px;
+}
+
+.section-criar-nota{
+    margin: 15vh 0 0 0;
+    background: $transparency-color;
+    border-radius: 0;
+    color: $color-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 85vh;
+    width: 100%;
+    z-index: -2;
+    padding: 10vh 0;
+}
+
+.section-criar-nota .background-image{
+    background: url(./imagens/blocoNotas.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    position: absolute;
+    z-index: -1;     
+}
+
+.display-4{
+    font-size: 75px;
+    font-weight: bold;
+    line-height: 70px;
+    text-shadow: 0px 5px 5px $color-text-shadow;
+}
+
+.section-criar-nota p{
+    font-size: 20px;
+}
+.section-criar-nota .lead2{
+    font-weight: bold;
+}
+
+.btn-criar-nota, #btn-incluir-nota{
+font-size: 23px;
+border:none;
+padding:10px;
+cursor: pointer;
+display:inline-block;
+text-decoration: none;
+background:$secondary-color;
+color:$color-text;
+box-shadow:$text-shadow-button $primary-color;
+width: 55%;
+height: 50px;
+margin: 0 auto;
+}
+
+.btn-criar-nota:focus, #btn-incluir-nota:focus{
+    outline:none;
+    border:none;
+}
+
+.btn-criar-nota:hover, #btn-incluir-nota:hover{
+background:$primary-color;
+box-shadow:$text-shadow-button $tertiary-color;
+text-decoration: none;
+color: $color-text;
+}
+
+.btn-criar-nota:active, #btn-incluir-nota:active{
+position:relative;
+top:5px;
+box-shadow:none;
+text-decoration: none;
+}
+
+#cabecalho-entrada-dados{
+    background-color: $primary-color;
+    box-shadow: $box-shadow-default $color-box-shadow;
+    color: $color-text;
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase; 
+    text-shadow: $text-shadow-section-title $color-text-shadow;
+}
+
+.entrada-dados{
+    background-image: linear-gradient(($primary-color), $background-color-default);
+    display: flex;
+    height: 85vh;
+    width: 100%;
+}
+
+form{
+    padding: 5vh 5vw;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form label{
+    color: $color-text;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.form-control{
+    background-color: $background-color-default;
+    border: $border-default;
+    box-shadow: $box-shadow-default $color-box-shadow;
+    font-family: roboto;
+    font-size: 25px;
+    transition: all;
+    padding: 1.5%;
+    width: 100%;
+}
+.form-group{
+    margin: 0;
+}
+
+form input:hover, form textarea:hover{
+    box-shadow: $box-shadow-default $primary-color;
+}
+
+#btn-incluir-nota{
+    width: 100%;
+}
+
+.quantidadeNotasAviso{
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-around;
+    width: 50%
+}
+
+.quantidadeNotas{
+    box-shadow: $box-shadow-default $color-box-shadow;
+    margin: 0 auto;
+    width: 40%;
+}
+
+th, td{
+    background-color: $background-color-default;
+    border: $border-default;
+    display: inline-block;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+th{
+    font-size: 18px;
+}
+
+td{
+    font-size: 50px;
+}
+
+#aviso{
+    background-color: $background-color-default;
+    border: $border-default;
+    box-shadow: $box-shadow-default $color-box-shadow;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+}
+
+.avisoInicial{
+    
+    padding: 2%;
+    font-weight: bold;
+}
+
+.avisoFinal a{
+    text-decoration: none;
+    color: $color-text;
+}
+.avisoFinal a:hover{
+    color:$color-text;
+    text-decoration: none;
+}
+
+.avisoFinal{
+    font-size: 23px;
+    border:none;
+    padding:10px;
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none;
+    background:$secondary-color;
+    color:$color-text;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+}
+        
+.btn-criar-nota:hover, #btn-incluir-nota:hover, .avisoFinal:hover{
+    background:$primary-color; 
+}
+
+#aviso .textoAviso{
+    padding: 2%;
+    font-weight: bold;
+}
+
+#aviso .avisoItens{
+    padding-bottom: 2%;
+}
+
+.cabecalhoNotas{
+    background-color: $primary-color;
+    box-shadow: $box-shadow-default $color-box-shadow;
+    color: $color-text;
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase; 
+    text-shadow: $text-shadow-section-title $color-text-shadow;
+}
+
+#resultadoNotas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $background-color-default;
+}
+
+
+.card{   
+    box-shadow: 0 4px 8px 0 $color-box-shadow-cards;
+    margin: 1.5% 1% 0 1%;
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+box-shadow: 0 8px 16px 0 $color-box-shadow-cards;
+}
+
+.card-header, .card-footer{
+    background-color: $primary-color !important;
+    color: $color-text;
+    font-weight: bold;
+    text-align: center;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
